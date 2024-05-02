@@ -1,39 +1,5 @@
 {
-  "projetos": [
-    {
-      "id": "a4ae",
-      "name": "Dev Mobile",
-      "budget": "5000",
-      "categorias": {
-        "id": "2",
-        "name": "Desenvolvimento"
-      },
-      "cost": 0,
-      "services": []
-    },
-    {
-      "id": "6fef",
-      "name": "Alpha",
-      "budget": "10000",
-      "categorias": {
-        "id": "3",
-        "name": "Design"
-      },
-      "cost": 0,
-      "services": []
-    },
-    {
-      "id": "2c16",
-      "name": "A",
-      "budget": "123",
-      "categorias": {
-        "id": "4",
-        "name": "Planejamento"
-      },
-      "cost": 0,
-      "services": []
-    }
-  ],
+  "projetos": [],
   "categorias": [
     {
       "id": "1",
