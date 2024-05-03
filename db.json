@@ -29,6 +29,78 @@
           "id": "06647f44-b862-44ff-9576-5e06ff62e419"
         }
       ]
+    },
+    {
+      "id": "6714",
+      "name": "Projeto 10000",
+      "budget": "10000",
+      "categorias": {
+        "id": "2",
+        "name": "Desenvolvimento"
+      },
+      "cost": 5300,
+      "services": [
+        {
+          "name": "Dev",
+          "cost": "300",
+          "description": "Contratar dev",
+          "id": "ba11f559-b9a1-42c4-bae2-4a284994385e"
+        },
+        {
+          "name": "Dev full",
+          "cost": "5000",
+          "description": "Contratar dev",
+          "id": "6607d01e-0ff9-4ca9-a8a1-03633a4a9ffb"
+        }
+      ]
+    },
+    {
+      "id": "2f1a",
+      "name": "2 serviços",
+      "budget": "2000",
+      "categorias": {
+        "id": "4",
+        "name": "Planejamento"
+      },
+      "cost": 1248,
+      "services": [
+        {
+          "name": "Contratar Dev React",
+          "cost": "40",
+          "description": "Vai criar uma função pra enviar e-mail",
+          "id": "8d010121-368f-48ad-ae06-fd37414354d1"
+        },
+        {
+          "name": "Contratar Dev React 2",
+          "cost": "50",
+          "description": "Vai criar uma função pra enviar e-mail",
+          "id": "421ba14f-f035-4bda-b48e-1554fd51d9f4"
+        },
+        {
+          "name": "Teste",
+          "cost": "1000",
+          "description": "Descrição",
+          "id": "47861d8e-2620-4b05-8c4b-18b2f94c4931"
+        },
+        {
+          "name": "asdas",
+          "cost": "123",
+          "description": "4sdada",
+          "id": "06f5dd25-3aa9-41b7-b710-38c49f48aa7f"
+        },
+        {
+          "name": "adsada",
+          "cost": "1",
+          "description": "asdsad",
+          "id": "bfe938ce-899f-4489-8897-e654987e1be3"
+        },
+        {
+          "name": "asdada",
+          "cost": "34",
+          "description": "sadasda",
+          "id": "ad011494-7c30-4de0-8b2f-e126c0b7c67a"
+        }
+      ]
     }
   ],
   "categorias": [

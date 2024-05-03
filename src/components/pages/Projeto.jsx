@@ -7,6 +7,7 @@ import FormProjeto from "../projeto/FormProjeto";
 import Container from "../layout/Container";
 import Mensagens from "../layout/Mensagens";
 import ServiceForm from "../service/ServiceForm";
+import ServiceCard from "../service/ServiceCard";
 
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
@@ -15,6 +16,7 @@ function Projeto() {
   const { id } = useParams();
 
   const [projeto, setProjeto] = useState([]);
+  const [services, setServices] = useState([]);
   const [showProjectForm, setShowProjectForm] = useState(false);
   const [showServiceForm, setShowServiceForm] = useState(false);
   const [mensagem, setMensagem] = useState();
@@ -31,6 +33,7 @@ function Projeto() {
         .then((res) => res.json())
         .then((data) => {
           setProjeto(data);
+          setServices(data.services);
         })
         .catch((err) => console.log());
     }, 300);
@@ -71,7 +74,7 @@ function Projeto() {
   };
 
   const createService = (projeto) => {
-    setMensagem('')
+    setMensagem("");
     const lastService = projeto.services[projeto.services.length - 1];
 
     lastService.id = uuidv4();
@@ -98,10 +101,12 @@ function Projeto() {
     })
       .then((res) => res.json())
       .then((data) => {
-        
+        setShowServiceForm(false);
       })
       .catch((err) => console.log(err));
   };
+
+  const removeService = () => {};
 
   return (
     <>
@@ -152,8 +157,19 @@ function Projeto() {
               </div>
             </div>
             <h2>Serviços</h2>
-            <Container className="start">
-              <p>Itens do serviço</p>
+            <Container customClass='start'>
+              {services.length > 0 &&
+                services.map((service) => (
+                  <ServiceCard
+                    id={service.id}
+                    name={service.name}
+                    cost={service.cost}
+                    description={service.description}
+                    key={service.id}
+                    handleRemove={removeService}
+                  />
+                ))}
+              {services.length === 0 && <p>Não há serviços cadastrados!</p>}
             </Container>
           </Container>
         </div>
