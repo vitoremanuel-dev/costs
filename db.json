@@ -1,37 +1,34 @@
 {
   "projetos": [
     {
-      "id": "fbfd",
-      "name": "qeqwe",
-      "budget": "123",
+      "id": "e2f2",
+      "name": "Projeto teste",
+      "budget": "20",
       "categorias": {
-        "id": "2",
-        "name": "Desenvolvimento"
+        "id": "3",
+        "name": "Design"
       },
-      "cost": 0,
-      "services": []
-    },
-    {
-      "id": "8954",
-      "name": "Vitor",
-      "budget": "123",
-      "categorias": {
-        "id": "2",
-        "name": "Desenvolvimento"
-      },
-      "cost": 0,
-      "services": []
-    },
-    {
-      "id": "4811",
-      "name": "akdmkamdkmakmdk",
-      "budget": "98975827394728",
-      "categorias": {
-        "id": "1",
-        "name": "Infra"
-      },
-      "cost": 0,
-      "services": []
+      "cost": 20,
+      "services": [
+        {
+          "name": "adadaa",
+          "cost": "10",
+          "description": "dasda",
+          "id": "fb7ce18f-38d1-4878-b9cf-8f3b7e71400a"
+        },
+        {
+          "name": "adadaa",
+          "cost": "5",
+          "description": "dasda",
+          "id": "06647f44-b862-44ff-9576-5e06ff62e419"
+        },
+        {
+          "name": "adadaa",
+          "cost": "5",
+          "description": "dasda",
+          "id": "06647f44-b862-44ff-9576-5e06ff62e419"
+        }
+      ]
     }
   ],
   "categorias": [
