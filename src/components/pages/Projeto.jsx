@@ -106,7 +106,34 @@ function Projeto() {
       .catch((err) => console.log(err));
   };
 
-  const removeService = () => {};
+  const removeService = (id, cost) => {
+    setMensagem("");
+
+    const servicesUpdated = projeto.services.filter(
+      (service) => service.id !== id
+    );
+
+    const projectUpdated = projeto;
+
+    projectUpdated.services = servicesUpdated;
+    projectUpdated.cost = parseFloat(projectUpdated.cost) - parseFloat(cost);
+
+    fetch(`http://localhost:5000/projetos/${projectUpdated.id}`, {
+      method: "PATCH",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(projectUpdated),
+    })
+      .then((res) => res.json)
+      .then((data) => {
+        setProjeto(projectUpdated);
+        setServices(servicesUpdated);
+        setMensagem("Serviço removido com sucesso");
+        setType("sucesso");
+      })
+      .catch((err) => console.log(err));
+  };
 
   return (
     <>
@@ -157,7 +184,7 @@ function Projeto() {
               </div>
             </div>
             <h2>Serviços</h2>
-            <Container customClass='start'>
+            <Container customClass="start">
               {services.length > 0 &&
                 services.map((service) => (
                   <ServiceCard
